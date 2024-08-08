@@ -8,11 +8,9 @@ def good(data, n, N):
     while low < high:
         if low == n:
             low += 1
-        if high == n:
+        elif high == n:
             high -= 1
-        if low == high:
-            return 0
-        if data[low] + data[high] > target:
+        elif data[low] + data[high] > target:
             high -= 1
         elif data[low] + data[high] < target:
             low += 1
